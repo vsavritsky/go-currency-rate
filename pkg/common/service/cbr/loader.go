@@ -2,7 +2,7 @@ package cbr
 
 import (
 	"encoding/xml"
-	"github.com/vsavritsky/currencyRate/pkg/common/model"
+	"github.com/vsavritsky/go-currency-rate/pkg/common/model"
 	"golang.org/x/net/html/charset"
 	"log"
 	"net/http"

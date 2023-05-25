@@ -1,4 +1,4 @@
-module github.com/vsavritsky/currencyRate
+module github.com/vsavritsky/go-currency-rate
 
 go 1.20
 

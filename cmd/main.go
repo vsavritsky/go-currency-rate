@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/vsavritsky/currencyRate/pkg/common/service/cbr"
+	"github.com/vsavritsky/go-currency-rate/pkg/common/service/cbr"
 )
 
 func main() {

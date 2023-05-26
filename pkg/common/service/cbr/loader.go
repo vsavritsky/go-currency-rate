@@ -2,6 +2,7 @@ package cbr
 
 import (
 	"encoding/xml"
+	"fmt"
 	"github.com/vsavritsky/go-currency-rate/pkg/common/model"
 	"golang.org/x/net/html/charset"
 	"log"
@@ -12,7 +13,7 @@ import (
 	"time"
 )
 
-const URL = "https://cbr.ru/scripts/XML_daily.asp"
+const URL = "https://www.cbr-xml-daily.ru/daily_utf8.xml"
 const DF = "02/01/2006"
 
 var mu sync.Mutex
@@ -74,10 +75,12 @@ func FetchCurrencyRates(d time.Time) map[string]CurrencyRate {
 	}
 
 	var data XmlResult
-
+	fmt.Println(data)
 	decoder := xml.NewDecoder(resp.Body)
 	decoder.CharsetReader = charset.NewReaderLabel
+
 	err = decoder.Decode(&data)
+	fmt.Println(data)
 
 	if err != nil {
 		log.Printf("error: %v", err)
